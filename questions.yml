@@ -139,12 +139,12 @@ questions:
     label: Default StorageClass for MariaDB
 - variable: persistence.enabled
   default: false
-  description: "Enable persistent volume for Joomla"
+  description: "Enable persistent volume for Opencart"
   type: boolean
   required: true
-  label: Joomla Persistent Volume Enabled
+  label: Opencart Persistent Volume Enabled
   show_subquestion_if: true
-  group: "Joomla Settings"
+  group: "Opencart Settings"
   subquestions:
   - variable: persistence.size
     default: "10Gi"
@@ -177,7 +177,7 @@ questions:
     label: Hostname
 - variable: service.type
   default: "NodePort"
-  description: "Joomla Service type"
+  description: "Opencart Service type"
   type: enum
   show_if: "ingress.enabled=false"
   options:
@@ -185,7 +185,7 @@ questions:
   - "NodePort"
   - "LoadBalancer"
   required: true
-  label: Joomla Service Type
+  label: Opencart Service Type
   show_subquestion_if: "NodePort"
   group: "Services and Load Balancing"
   subquestions:
